@@ -36,6 +36,7 @@ nav .nav-links{
 
 .hero{
     display: flex;
+    align-items: center;
 }
 
 .hero .left img{
@@ -79,16 +80,29 @@ p.all{
     justify-content: space-between;
     margin-top: 5%;
     margin-bottom: 5%;
+
 }
 
 .work .cards .card{
     background-color: #1E1E1E;
     width: 30%;
     padding: 5%;
+    flex-basis: 250px;
+    margin: auto;
+    margin-top: 10%;
+    color: #ffffff;
+}
+.work .cards  .card h2{
+    font-size: 1.3rem;
+    margin-bottom: 10px;
 }
 
 .work .cards  .card.red{
     background:#c80202 ;
+}
+
+.work .cards  .card.red h2{
+    color: #ffffff;
 }
 
 .counts {
@@ -179,7 +193,7 @@ p.all{
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 55px;
-    height: 100%;
+    /* height: 100%; */
     grid-gap: 5 0px;
  }
 
@@ -190,15 +204,15 @@ p.all{
 
  .projects .cards .card .card-img{
     background-color: #1E1E1E;
-    width: 525px;
-    height: 400px;
+    width: 35vw;
+    height: 30vh;
     display: flex;
     align-items: center;
     justify-content: center;
  }
 
  .projects .cards .card img{
-    width: 30vw;
+    width: 28vw;
  }
 
  .projects .cards h1{
@@ -260,4 +274,227 @@ footer{
     color:#c80202;
     font-size: 2rem;
     font-weight: 800;
+}
+
+
+/* -----------media queries ------------ */
+
+/* --------------------media queries------------------- */
+
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 1024px) { 
+    .projects .cards .card {
+        width: 35vw;
+     }
+    
+     .projects .cards .card .card-img{
+        width: 35vw;
+        height: 30vh;
+        margin-top: 8vh;
+     }
+    
+     .projects .cards .card img{
+        width: 30vw;
+     }
+ }
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 768px) {
+    nav .nav-links{
+        display: none;
+    }
+    .hero{
+        width: 100vw;
+    }
+
+    .hero .left{
+        align-self: center;
+    }
+
+    .hero .left img{
+        width: 55vw;
+        margin-left: 0;
+        z-index: -1;
+    }
+
+    .hero .right{
+        width: 40vw;
+        padding: 0;
+    }
+
+    .hero .red-head{
+        font-size: 1rem;
+    }
+    .right h1{
+        font-size: 2rem;
+    }
+    p.all{
+        font-size: .6rem;
+    }
+
+    .red-btn{
+        font-size: .8rem;
+    }
+
+    .counts {
+        grid-template-rows: 1fr 1fr 1fr ;
+        grid-template-columns: 1fr 1fr;  
+     }
+
+     .item{
+        padding: 10% 0 5% 0;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1;
+     }
+       
+     #item-0 {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 1;
+        grid-column-end: 3;
+        
+     }
+
+     #item-1 {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-row-end: 2;
+        grid-column-end: 1;    
+     }
+    
+     #item-2 {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        grid-row-end: 2;
+        grid-column-end: 2;
+        
+     }
+     #item-3 {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-row-end: 3;
+        grid-column-end: 1;
+        
+     }
+     #item-4 {
+        grid-row-start: 3;
+        grid-column-start: 2;
+        grid-row-end: 3;
+        grid-column-end: 2;
+        
+     }
+
+     .projects .head{
+        flex-direction: column;
+     }
+
+     .projects .cards{
+        grid-template-rows: 1fr 1fr 1fr 1fr ;
+        grid-template-columns: 1fr;
+        
+     }
+     .projects .cards .card {
+        width: 70vw;
+     }
+    
+     .projects .cards .card .card-img{
+        width: 70vw;
+        height: 30vh;
+        margin-top: 8vh;
+     }
+    
+     .projects .cards .card img{
+        width: 60vw;
+     }
+    
+     .projects .cards h1{
+        color: #ffffff;
+        font-size: 1.5rem;
+        margin: 10px 0;
+     }
+    
+     .projects .cards h2{
+        font-size: 1.3rem;
+     }
+
+     .contact{
+        flex-direction: column;
+        text-align: center;
+     }
+
+     .contact .left h1{
+        font-size: 1.5rem;
+     }
+
+     .contact .left p{
+        margin-top: 20px;
+     }
+
+     .contact .right{
+        padding: 0;
+        margin-bottom: 20px;
+     }
+
+     .footer-link{
+        display: none;
+     }
+}
+
+@media (max-width: 480px) {  
+
+
+    .counts {
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-columns: 1fr;  
+     }
+
+     .item{
+        padding: 10% 0 5% 0;
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1;
+     }
+       
+     #item-0 {
+        grid-row-start: 1;
+        grid-column-start: 1;
+        grid-row-end: 1;
+        grid-column-end: 3;
+        
+     }
+
+     #item-1 {
+        grid-row-start: 2;
+        grid-column-start: 1;
+        grid-row-end: 2;
+        grid-column-end: 3;    
+     }
+    
+     #item-2 {
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-row-end: 3;
+        grid-column-end: 3;
+        
+     }
+     #item-3 {
+        grid-row-start: 4;
+        grid-column-start: 1;
+        grid-row-end: 4;
+        grid-column-end: 3;
+        
+     }
+     #item-4 {
+        grid-row-start: 5;
+        grid-column-start: 1;
+        grid-row-end: 5;
+        grid-column-end: 3;
+        
+     }
+
+    
+
+
 }
